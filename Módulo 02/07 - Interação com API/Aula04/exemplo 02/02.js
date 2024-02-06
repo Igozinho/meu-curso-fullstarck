@@ -6,8 +6,19 @@ async function procurar(){
     console.log(ponu)
 
     for (let respota in ponu){
-        document.body.innerHTML += "<h1 class='titulo'>" +  ponu[respota].nome + "</h1>"
-
+        //document.body.innerHTML += "<h1 class='titulo'>" +  ponu[respota].nome + "</h1>"    //metodo - 01
+        //document.body.innerHTML += `<h1 class='titulo'> ${ponu[respota].nome}  </h1>`      //metodo - 02
+        document.body.innerHTML += `
+        <p class='titulo'>
+        ${ponu[respota].nome}
+        </p>
+        <img
+        src="${ponu[respota].img}"
+        alt=""
+        width="auto"
+        height="250"
+        >
+        `
     }
     
 }
